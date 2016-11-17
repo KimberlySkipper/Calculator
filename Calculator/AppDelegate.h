@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CalculationDelegate
+
+
+
+@end
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
