@@ -23,7 +23,7 @@
 - (IBAction)equalButtonPressed:(UIButton *)sender;
 - (IBAction)clearButtonPressed:(UIButton *)sender;
 
-float 
+
 
 @end
 
@@ -35,8 +35,8 @@ float
     self.numbers =2;
     self.sumLabel.text = [NSString stringWithFormat:@"%ld", (long)self.numbers];
     
-    //NSString *aNumber = [NSString stringWithFormat:@"%ld", (long)self.numbers];
-    //[_sumLabel setText:aNumber];
+    NSString *aNumber = [NSString stringWithFormat:@"%ld", (long)self.numbers];
+    [_sumLabel setText:aNumber];
     
 
     //NSString *aString = [NSString stringWithFormat:@"Hello, %@!", @"World"];
@@ -56,7 +56,7 @@ float
 
 - (IBAction)numberButtonPressed:(UIButton *)sender;
 {
-    
+
 }
 
 - (IBAction)operatorButtonPressed:(UIButton *)sender;
