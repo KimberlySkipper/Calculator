@@ -7,13 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol CalculationDelegate
-
-
-
-@end
-
+//I STARTED TO PUT DELEGATE HERE THEN REMOVED IT.
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

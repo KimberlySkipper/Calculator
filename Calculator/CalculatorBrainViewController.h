@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SolvingSimpleMathEquationsDelegate //declaring a delegate
+
+//-(void)numberValueWasChosen:(NSInteger)numberValue;//adding a method to display numbers selected for equation.
+
+@end
+
 @interface CalculatorBrainViewController : UIViewController
 
 
