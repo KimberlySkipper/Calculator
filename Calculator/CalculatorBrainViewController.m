@@ -7,16 +7,14 @@
 //
 
 #import "CalculatorBrainViewController.h"
+#import "CalculatorBrain.h"
+
 
 @interface CalculatorBrainViewController () <SolvingSimpleMathEquationsDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 
-@property (assign) NSInteger numbers;
-@property (nonatomic) NSString *equalSign;
-@property (nonatomic) NSString *clearSign;
-@property (nonatomic) NSString *operators;
 
 - (IBAction)numberButtonPressed:(UIButton *)sender;
 - (IBAction)operatorButtonPressed:(UIButton *)sender;
@@ -31,20 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.answerLabel.text = @""; //set the answer label as empty string to accept numbers
-    
-    /*self.numbers =2;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)self.numbers];
-    
-    NSString *aNumber = [NSString stringWithFormat:@"%ld", (long)self.numbers];
-    [_answerLabel setText:aNumber];
-    
-
-    NSString *aString = [NSString stringWithFormat:@"Hello, %@!", @"World"];
-    NSString *string = [NSString stringWithFormat:@"%d", myInt];
-    [label setText:string];
-    */
-    
+    self.answerLabel.text = @"";//set the answer label as empty string to accept numbers
+       
     // Do any additional setup after loading the view.
 }
 
@@ -57,43 +43,14 @@
 
 - (IBAction)numberButtonPressed:(UIButton *)sender;
 {
+    self.answerLabel.text = sender.titleLabel.text;
     
-    int numberZero= 0;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)numberZero];
-    
-    int numberOne= 1;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)numberOne];
-    
-    int numberTwo= 2;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)numberTwo];
-    
-    int numberThree= 3;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)numberThree];
-    
-    int numberFour= 4;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)numberFour];
-
-    int numberFive= 5;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)numberFive];
-    
-    int numberSix= 6;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)numberSix];
-    
-    int numberSeven= 7;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)numberSeven];
-    
-    int numberEight= 8;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)numberEight];
-    
-    int numberNine= 9;
-    self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)numberNine];
-
-
+   
 }
 
 - (IBAction)operatorButtonPressed:(UIButton *)sender;
 {
-
+    
 }
 
 - (IBAction)equalButtonPressed:(UIButton *)sender;

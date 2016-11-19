@@ -133,7 +133,7 @@
                                         <rect key="frame" x="0.0" y="502.5" width="728" height="166.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag3-nZ-US2">
-                                                <rect key="frame" x="0.0" y="0.0" width="181.5" height="166.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181" height="166.5"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="4">
@@ -144,7 +144,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wye-nN-OtE">
-                                                <rect key="frame" x="182.5" y="0.0" width="181" height="166.5"/>
+                                                <rect key="frame" x="182" y="0.0" width="181.5" height="166.5"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="5">
@@ -247,7 +247,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFu-65-Fob">
-                                                <rect key="frame" x="258.5" y="0.0" width="234.5" height="166.5"/>
+                                                <rect key="frame" x="258.5" y="0.0" width="235" height="166.5"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title=".">
@@ -258,7 +258,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGB-1F-1uF">
-                                                <rect key="frame" x="493" y="0.0" width="235" height="166.5"/>
+                                                <rect key="frame" x="493.5" y="0.0" width="234.5" height="166.5"/>
                                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="=">
@@ -304,11 +304,28 @@
                     <navigationItem key="navigationItem" id="NP6-LD-JWN"/>
                     <connections>
                         <outlet property="answerLabel" destination="cCg-KI-nxz" id="rAM-oJ-6BE"/>
+                        <outlet property="buttonClear" destination="Nnd-Bm-wis" id="Qwy-jK-sGn"/>
+                        <outlet property="buttonDecimal" destination="gFu-65-Fob" id="OeD-pL-T5g"/>
+                        <outlet property="buttonDivide" destination="UYY-ws-rtr" id="XfN-eL-DV8"/>
+                        <outlet property="buttonEight" destination="f9F-Oe-aw4" id="UBH-CA-QCN"/>
+                        <outlet property="buttonEqual" destination="GGB-1F-1uF" id="GbR-3r-uCs"/>
+                        <outlet property="buttonFive" destination="wye-nN-OtE" id="8Mj-Mm-ans"/>
+                        <outlet property="buttonFour" destination="ag3-nZ-US2" id="jdL-Bp-SDg"/>
+                        <outlet property="buttonMinus" destination="kwa-Hq-Y0w" id="ZT1-S2-ZvR"/>
+                        <outlet property="buttonMultiply" destination="WXI-JA-1rS" id="MnK-nM-pTA"/>
+                        <outlet property="buttonNine" destination="l3v-aL-kz2" id="8YE-nO-kcd"/>
+                        <outlet property="buttonOne" destination="f2J-at-fm4" id="c0Y-si-Rch"/>
+                        <outlet property="buttonPlus" destination="xZ2-yu-4ZV" id="1Vh-ai-Xck"/>
+                        <outlet property="buttonSeven" destination="Ydz-as-scz" id="cf6-uW-pEF"/>
+                        <outlet property="buttonSix" destination="Wfn-ok-ijf" id="kCN-ZM-8td"/>
+                        <outlet property="buttonThree" destination="pYo-x1-RV0" id="2uA-kN-uaX"/>
+                        <outlet property="buttonTwo" destination="GyL-Ul-7Oc" id="f4V-2c-qqA"/>
+                        <outlet property="buttonZero" destination="dwT-WX-tCE" id="2NE-ud-7a7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJe-Uc-JnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="22.03898050974513"/>
+            <point key="canvasLocation" x="1257" y="-304"/>
         </scene>
     </scenes>
 </document>
