@@ -41,7 +41,8 @@
 //    empty out operator and operand1 and operand2;
     [self.operand1 setString:@""];
     [self.operand2 setString:@""];
-    self.anOperator = nil; // nil is the same as fale for a boolean statement.
+    // nil is the same as false for a boolean statement.
+    self.anOperator = nil;
     self.myDisplay = @"";
 }
 

@@ -12,7 +12,7 @@
 
 @interface CalculatorBrainViewController () <SolvingSimpleMathEquationsDelegate>
 
-@property (strong, nonatomic) CalculatorBrain *calculatorBrain;
+
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 
 
@@ -22,21 +22,25 @@
 - (IBAction)equalButtonPressed:(UIButton *)sender;
 - (IBAction)clearButtonPressed:(UIButton *)sender;
 
-
 @end
 
 @implementation CalculatorBrainViewController
 
+CalculatorBrain *calculatorBrain;
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.calculatorBrain = [[CalculatorBrain alloc] init];
-    self.calculatorBrain.operand1 = [NSMutableString string];
-    self.calculatorBrain.operand2 = [NSMutableString string];
+    calculatorBrain = [[CalculatorBrain alloc] init];
+    calculatorBrain.operand1 = [NSMutableString string];
+    calculatorBrain.operand2 = [NSMutableString string];
     
-    [self. calculatorBrain clearWasSelected];
-   
-    self.answerLabel.text = self.calculatorBrain.myDisplay;//set the answer label as empty string to accept numbers
+    [calculatorBrain clearWasSelected];
+    
+    //set the answer label as empty string to accept numbers
+    self.answerLabel.text = calculatorBrain.myDisplay;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,27 +53,27 @@
 - (IBAction)numberButtonPressed:(UIButton *)sender;
 {
     
-    [self.calculatorBrain numberWasSelected:(sender.titleLabel.text)];
-    self.answerLabel.text = self.calculatorBrain.myDisplay;
+    [calculatorBrain numberWasSelected:(sender.titleLabel.text)];
+    self.answerLabel.text = calculatorBrain.myDisplay;
    
 }
 
 - (IBAction)operatorButtonPressed:(UIButton *)sender;
 {
-    [self.calculatorBrain operatorWasSelected:(sender.titleLabel.text)];
-    self.answerLabel.text =self.calculatorBrain.myDisplay;
+    [calculatorBrain operatorWasSelected:(sender.titleLabel.text)];
+    self.answerLabel.text =calculatorBrain.myDisplay;
 }
 
 - (IBAction)equalButtonPressed:(UIButton *)sender;
 {
-    [self.calculatorBrain equalWasSelected:(sender.titleLabel.text)];
-    self.answerLabel.text =self.calculatorBrain.myDisplay;
+    [calculatorBrain equalWasSelected:(sender.titleLabel.text)];
+    self.answerLabel.text =calculatorBrain.myDisplay;
 }
 
 - (IBAction)clearButtonPressed:(UIButton *)sender;
 {
-    [self.calculatorBrain clearWasSelected];
-    self.answerLabel.text =self.calculatorBrain.myDisplay;
+    [calculatorBrain clearWasSelected];
+    self.answerLabel.text =calculatorBrain.myDisplay;
 }
 
 
