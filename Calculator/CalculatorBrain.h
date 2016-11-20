@@ -10,13 +10,14 @@
 
 @interface CalculatorBrain : NSObject
 
-//@property (assign) NSInteger number;
-//@property (nonatomic) NSString *equalSign;
-//@property (nonatomic) NSString *clearSign;
 @property (nonatomic) NSString *anOperator;
 @property (nonatomic) NSMutableString *operand1;
 @property (nonatomic) NSMutableString *operand2;
+@property (nonatomic) NSString *myDisplay;
 
--(void)numberWasSelected:(NSString*)numberSelected;
+-(void)numberWasSelected:(NSString *)numberSelected;
+-(void)operatorWasSelected:(NSString *)operatorSelected;
+-(void)clearWasSelected;
+-(void)equalWasSelected:(NSString *)equalSelected;
 
 @end

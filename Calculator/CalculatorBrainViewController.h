@@ -10,7 +10,10 @@
 
 @protocol SolvingSimpleMathEquationsDelegate //declaring a delegate
 
-//-(void)numberValueWasChosen:(NSInteger)numberValue;//adding a method to display numbers selected for equation.
+-(IBAction)numberButtonPressed:(UIButton *)sender;//adding a method to display numbers selected for equation.
+-(IBAction)operatorButtonPressed:(UIButton *)sender;
+-(IBAction)clearButtonPressed:(UIButton *)sender;
+-(IBAction)equalButtonPressed:(UIButton *)sender;
 
 @end
 

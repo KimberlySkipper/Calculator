@@ -12,8 +12,9 @@
 
 @interface CalculatorBrainViewController () <SolvingSimpleMathEquationsDelegate>
 
-
+@property (strong, nonatomic) CalculatorBrain *calculatorBrain;
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+
 
 
 - (IBAction)numberButtonPressed:(UIButton *)sender;
@@ -29,9 +30,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.answerLabel.text = @"";//set the answer label as empty string to accept numbers
-       
-    // Do any additional setup after loading the view.
+    self.calculatorBrain = [[CalculatorBrain alloc] init];
+    self.calculatorBrain.operand1 = [NSMutableString string];
+    self.calculatorBrain.anOperator = @"";
+    self.calculatorBrain.operand2 = [NSMutableString string];
+    self.calculatorBrain.myDisplay = @"";
+    self.answerLabel.text = self.calculatorBrain.myDisplay;//set the answer label as empty string to accept numbers
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,24 +47,28 @@
 
 - (IBAction)numberButtonPressed:(UIButton *)sender;
 {
-    self.answerLabel.text = sender.titleLabel.text;
     
+    [self.calculatorBrain numberWasSelected:(sender.titleLabel.text)];
+    self.answerLabel.text = self.calculatorBrain.myDisplay;
    
 }
 
 - (IBAction)operatorButtonPressed:(UIButton *)sender;
 {
-    
+    [self.calculatorBrain operatorWasSelected:(sender.titleLabel.text)];
+    self.answerLabel.text =self.calculatorBrain.myDisplay;
 }
 
 - (IBAction)equalButtonPressed:(UIButton *)sender;
 {
-
+    [self.calculatorBrain equalWasSelected:(sender.titleLabel.text)];
+    self.answerLabel.text =self.calculatorBrain.myDisplay;
 }
 
 - (IBAction)clearButtonPressed:(UIButton *)sender;
 {
-
+    [self.calculatorBrain clearWasSelected];
+    self.answerLabel.text =self.calculatorBrain.myDisplay;
 }
 
 

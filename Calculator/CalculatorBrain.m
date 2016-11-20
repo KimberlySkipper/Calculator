@@ -10,15 +10,20 @@
 
 @implementation CalculatorBrain
 
+
+
+
 -(void)numberWasSelected:(NSString *)numberSelected
 {
     if (self.anOperator)
     {
         [self.operand2 appendString: numberSelected];
+        self.myDisplay = self.operand2;
     }
     else
     {
         [self.operand1 appendString:numberSelected];
+        self.myDisplay = self. operand1;
     }
 }
 
@@ -27,22 +32,24 @@
     if(!self.anOperator)
     {
         self.anOperator = operatorSelected;
+        self.myDisplay = self.operand1;
     }
 }
 
 -(void)clearWasSelected
 {
-//    empty out operator and _operand1 and _operand2;
+//    empty out operator and operand1 and operand2;
     [self.operand1 setString:@""];
     [self.operand2 setString:@""];
     self.anOperator =nil;
+    self.myDisplay = @"";
 }
 
-
--(void)getDisplay
+-(void)equalWasSelected: (NSString *)equalSelected
 {
-    
+
 }
+
 
 
 @end
