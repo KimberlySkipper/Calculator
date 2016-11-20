@@ -32,9 +32,10 @@
     
     self.calculatorBrain = [[CalculatorBrain alloc] init];
     self.calculatorBrain.operand1 = [NSMutableString string];
-    self.calculatorBrain.anOperator = @"";
     self.calculatorBrain.operand2 = [NSMutableString string];
-    self.calculatorBrain.myDisplay = @"";
+    
+    [self. calculatorBrain clearWasSelected];
+   
     self.answerLabel.text = self.calculatorBrain.myDisplay;//set the answer label as empty string to accept numbers
 }
 

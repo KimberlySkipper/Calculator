@@ -15,7 +15,7 @@
 
 -(void)numberWasSelected:(NSString *)numberSelected
 {
-    if (self.anOperator)
+    if (self.anOperator)  // if condition, must be YES or NO.
     {
         [self.operand2 appendString: numberSelected];
         self.myDisplay = self.operand2;
@@ -41,15 +41,48 @@
 //    empty out operator and operand1 and operand2;
     [self.operand1 setString:@""];
     [self.operand2 setString:@""];
-    self.anOperator =nil;
+    self.anOperator = nil; // nil is the same as fale for a boolean statement.
     self.myDisplay = @"";
 }
 
 -(void)equalWasSelected: (NSString *)equalSelected
 {
+    if ([self.anOperator isEqualToString:@"+"])
+    {
+        float operandNumber1 = ([self.operand1 floatValue]);
+        float operandNumber2 = ([self.operand2 floatValue]);
+        float results = operandNumber1 + operandNumber2;
+        self.myDisplay = [NSString stringWithFormat:@"%.2f", results];
 
+    }
+    
+    else if ([self.anOperator isEqualToString:@"-"])
+    {
+         float operandNumber1 = ([self.operand1 floatValue]);
+         float operandNumber2 = ([self.operand2 floatValue]);
+         float results = operandNumber1 - operandNumber2;
+         self. myDisplay = [NSString stringWithFormat:@"%.2f", results];
+    }
+    
+    else if ([self.anOperator isEqualToString:@"x"])
+    {
+         float operandNumber1 = ([self.operand1 floatValue]);
+         float operandNumber2 = ([self.operand2 floatValue]);
+         float results = operandNumber1 * operandNumber2;
+         self.myDisplay = [NSString stringWithFormat:@"%.2f", results];
+     }
+     
+     else
+     {
+         float operandNumber1 = ([self.operand1 floatValue]);
+         float operandNumber2 = ([self.operand2 floatValue]);
+         float results = operandNumber1 / operandNumber2;
+         self.myDisplay = [NSString stringWithFormat:@"%.4f", results];
+     }
+    
+    //CGFloat moduloResult = (float)((int)valueB % (int)valueA);
+    
 }
-
 
 
 @end
