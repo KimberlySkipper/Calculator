@@ -18,6 +18,6 @@
 -(void)numberWasSelected:(NSString *)numberSelected;
 -(void)operatorWasSelected:(NSString *)operatorSelected;
 -(void)clearWasSelected;
--(void)equalWasSelected:(NSString *)equalSelected;
+-(void)equalWasSelected;
 
 @end

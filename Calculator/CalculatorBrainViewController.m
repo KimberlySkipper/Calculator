@@ -39,7 +39,8 @@ CalculatorBrain *calculatorBrain;
     [calculatorBrain clearWasSelected];
     
     //set the answer label as empty string to accept numbers
-    self.answerLabel.text = calculatorBrain.myDisplay;
+    //self.answerLabel.text = calculatorBrain.myDisplay;
+    self.answerLabel.text = @"0";
     
 }
 
@@ -52,8 +53,10 @@ CalculatorBrain *calculatorBrain;
 
 - (IBAction)numberButtonPressed:(UIButton *)sender;
 {
-    
+    //using the number off of the label to use in the calculatorBrain
     [calculatorBrain numberWasSelected:(sender.titleLabel.text)];
+    
+    //then return the text to show on the answer label  
     self.answerLabel.text = calculatorBrain.myDisplay;
    
 }
@@ -66,14 +69,15 @@ CalculatorBrain *calculatorBrain;
 
 - (IBAction)equalButtonPressed:(UIButton *)sender;
 {
-    [calculatorBrain equalWasSelected:(sender.titleLabel.text)];
+    [calculatorBrain equalWasSelected];
     self.answerLabel.text =calculatorBrain.myDisplay;
 }
 
 - (IBAction)clearButtonPressed:(UIButton *)sender;
 {
     [calculatorBrain clearWasSelected];
-    self.answerLabel.text =calculatorBrain.myDisplay;
+    //self.answerLabel.text =calculatorBrain.myDisplay;
+    self.answerLabel.text = @"0";
 }
 
 
